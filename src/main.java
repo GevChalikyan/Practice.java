@@ -8,6 +8,7 @@ class Main {
 			System.exit(1);
 		} else {
 
+			final String algorithm = args[0];
 			String inputFile = "../data/input.txt";
 
 
@@ -16,13 +17,13 @@ class Main {
 				inputFile = args[1];
 			}
 			
-			switch(args[0]) {
+			switch(algorithm) {
 				case "MergeSort":
-					DivideAndConquer.main(new String[] { inputFile, args[0] });
+					DivideAndConquer.main(new String[] { algorithm, inputFile });
 					break;
 
 				default:
-					System.err.println(args[0] + " Not Recognized");
+					System.err.println(algorithm + " Not Recognized");
 					System.exit(1);
 			}
 			
