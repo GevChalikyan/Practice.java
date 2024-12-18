@@ -2,7 +2,7 @@
 
 cd ./src/
 
-javac main.java
-java main "$1"
+javac Main.java
+java Main "$1"
 
 find . -type f -name "*.class" -delete
