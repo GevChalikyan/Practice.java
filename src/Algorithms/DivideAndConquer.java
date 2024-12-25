@@ -89,33 +89,45 @@ public class DivideAndConquer {
       int[] left = MergeSort(Arrays.copyOfRange(arr, BEGIN, MIDDLE));
       int[] right = MergeSort(Arrays.copyOfRange(arr, MIDDLE, END));
       
-      int index_L = 0;
-      int index_R = 0;
 
-
-
-      for(int i = 0; i < arr.length; i++) {
-
-        if(index_L == left.length) {
-          arr[i] = right[index_R];
-          index_R++;
-        } else if(index_R == right.length) {
-          arr[i] = left[index_L];
-          index_L++;
-        } else if(left[index_L] <= right[index_R]) {
-          arr[i] = left[index_L];
-          index_L++;
-        } else{
-          arr[i] = right[index_R];
-          index_R++;
-        }
-
-      }
+      
+      arr = Merge(left, right);
       
     }
     
     return arr;
 
 	}
+
+  public static int[] Merge(int[] left, int[] right) {
+
+    int[] result = new int[left.length + right.length];
+
+    int index_L = 0;
+    int index_R = 0;
+
+
+
+    for(int i = 0; i < result.length; i++) {
+
+      if(index_L == left.length) {
+        result[i] = right[index_R];
+        index_R++;
+      } else if(index_R == right.length) {
+        result[i] = left[index_L];
+        index_L++;
+      } else if(left[index_L] <= right[index_R]) {
+        result[i] = left[index_L];
+        index_L++;
+      } else{
+        result[i] = right[index_R];
+        index_R++;
+      }
+
+    }
+
+    return result;
+
+  }
 
 }
