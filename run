@@ -3,6 +3,6 @@
 cd ./src/
 
 javac Main.java
-java Main "$1"
+java Main $1
 
 find . -type f -name "*.class" -delete
