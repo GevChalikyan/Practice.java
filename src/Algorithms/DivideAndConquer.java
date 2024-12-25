@@ -90,7 +90,7 @@ public class DivideAndConquer {
       int[] right = MergeSort(Arrays.copyOfRange(arr, MIDDLE, END));
       
 
-      
+
       arr = Merge(left, right);
       
     }
@@ -99,7 +99,7 @@ public class DivideAndConquer {
 
 	}
 
-  public static int[] Merge(int[] left, int[] right) {
+  private static int[] Merge(int[] left, int[] right) {
 
     int[] result = new int[left.length + right.length];
 
