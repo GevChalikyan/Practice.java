@@ -3,7 +3,6 @@ package Algorithms;
 import java.io.File;
 import java.util.Arrays;
 import java.util.Scanner;
-import java.util.stream.IntStream;
 
 public class DivideAndConquer {
 
@@ -101,7 +100,7 @@ public class DivideAndConquer {
       int index_L = 0;
       int index_R = 0;
 
-      
+
 
       for(int i = 0; i < arr.length; i++) {
 
