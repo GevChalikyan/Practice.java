@@ -80,22 +80,14 @@ public class DivideAndConquer {
 
 	public static int[] MergeSort(int[] arr) {
 
-    int[] result = MergeSortHelper(arr);
-
-		return result;
-
-	}
-  
-  private static int[] MergeSortHelper(int[] arr) {
-    
     if(arr.length > 1) {
       
       final int BEGIN = 0;
       final int END = arr.length;
       final int MIDDLE = (BEGIN + END) / 2;
       
-      int[] left = MergeSortHelper(Arrays.copyOfRange(arr, BEGIN, MIDDLE));
-      int[] right = MergeSortHelper(Arrays.copyOfRange(arr, MIDDLE, END));
+      int[] left = MergeSort(Arrays.copyOfRange(arr, BEGIN, MIDDLE));
+      int[] right = MergeSort(Arrays.copyOfRange(arr, MIDDLE, END));
       
       int index_L = 0;
       int index_R = 0;
@@ -124,6 +116,6 @@ public class DivideAndConquer {
     
     return arr;
 
-  }
+	}
 
 }
