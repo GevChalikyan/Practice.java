@@ -14,7 +14,7 @@ class Main {
 
 
 			if(args.length == 2) {
-				inputFile = args[1];
+				inputFile = "../data/" + args[1];
 			}
 			
 			switch(algorithm) {
