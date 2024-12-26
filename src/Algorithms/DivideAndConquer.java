@@ -46,7 +46,14 @@ public class DivideAndConquer {
 						"Input:  " + Arrays.toString(input) + '\n' +
 						"Result: " + Arrays.toString(MergeSort(input))
 						);
-					break;
+          break;
+            
+        case "MissingNumber":
+          System.out.println(
+            "Input:  " + Arrays.toString(input) + '\n' +
+            "Result: " + MissingNumber(input)
+          );
+          break;
 
 				default:
 					System.err.println(args[0] + " Not Recognized");
@@ -125,6 +132,20 @@ public class DivideAndConquer {
       }
 
     }
+
+    return result;
+
+  }
+
+
+
+  // ************** //
+  // MISSING NUMBER //
+  // ************** //
+
+  public static int MissingNumber(int[] arr) {
+
+    int result = -1;
 
     return result;
 

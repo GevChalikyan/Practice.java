@@ -19,6 +19,7 @@ class Main {
 			
 			switch(algorithm) {
 				case "MergeSort":
+        case "MissingNumber":
 					DivideAndConquer.main(new String[] { algorithm, inputFile });
 					break;
 
