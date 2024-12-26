@@ -9,7 +9,7 @@ class Main {
 		} else {
 
 			final String algorithm = args[0];
-			String inputFile = "../data/input.txt";
+			String inputFile = "../data/" + args[0] + ".txt";
 
 
 
