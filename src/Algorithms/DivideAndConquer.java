@@ -147,6 +147,26 @@ public class DivideAndConquer {
 
     int result = -1;
 
+    int low = 0;
+    int high = arr.length - 1;
+    int middle = (low + high) / 2;
+
+
+
+    while(low <= high) {
+      
+      if(arr[middle] == middle) {
+        low = middle + 1;
+      } else {
+        high = middle - 1;
+      }
+      
+      middle = (low + high) / 2;
+
+    }
+
+    result = low;
+
     return result;
 
   }
